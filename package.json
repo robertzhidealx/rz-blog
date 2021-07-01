@@ -31,5 +31,23 @@
     "prettier-plugin-tailwind": "^2.2.10",
     "tailwindcss": "^2.0.4",
     "typescript": "^4.2.3"
-  }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "node --max_old_space_size=8192 ./node_modules/.bin/eslint --fix --color --cache --quiet",
+      "git add"
+    ],
+    "*.{js,jsx,mjs,mjsx,cjs,cjsx}": [
+      "node --max_old_space_size=8192 ./node_modules/.bin/eslint --fix --color --cache --quiet",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "dist/",
+    "lib/",
+    ".rpt2_cache/"
+  ]
 }

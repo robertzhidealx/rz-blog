@@ -1,12 +1,9 @@
 import Layout from "../components/layout";
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import Date from "../components/date";
 import { getSortedPostsData } from "../lib/posts";
 import TypeWriter from "../components/TypeWriter";
-import Triangles from "../components/triangles";
-import RzAnimation from "../components/rzAnimation";
 
 interface Props {
   allPostsData: any;
@@ -20,8 +17,6 @@ const Home: React.FC<Props> = ({ allPostsData }) => {
           <title>Robert Zhang</title>
           <link rel='icon' href='/favicon.ico' />
         </Head>
-
-        {/* <Triangles /> */}
 
         <TypeWriter />
 
